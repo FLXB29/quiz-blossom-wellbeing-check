@@ -16,8 +16,8 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({ option, isSelected, onSelec
       className={cn(
         "w-full py-4 px-6 rounded-full flex justify-between items-center border transition-all",
         isSelected 
-          ? "bg-quiz-light-purple border-quiz-purple" 
-          : "bg-white border-gray-200 hover:border-quiz-purple"
+          ? "bg-quiz-light-blue border-quiz-blue" 
+          : "bg-white border-gray-200 hover:border-quiz-blue"
       )}
     >
       <span className="text-left">{option.text}</span>

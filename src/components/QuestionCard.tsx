@@ -25,7 +25,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   return (
     <div className="bg-white rounded-3xl shadow-md overflow-hidden p-6">
       <div className="flex items-center justify-between mb-2">
-        <h3 className="text-purple-800 font-medium">
+        <h3 className="text-quiz-blue font-medium">
           Câu hỏi {currentQuestion} / {totalQuestions}
         </h3>
         <div className="flex items-center">
@@ -35,7 +35,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             height="20" 
             viewBox="0 0 24 24" 
             fill="none" 
-            stroke="#9b87f5" 
+            stroke="#1E88E5" 
             strokeWidth="2" 
             strokeLinecap="round" 
             strokeLinejoin="round"
@@ -43,7 +43,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             <circle cx="12" cy="12" r="10"></circle>
             <polyline points="12 6 12 12 16 14"></polyline>
           </svg>
-          <span className="ml-1 text-quiz-purple">2:00</span>
+          <span className="ml-1 text-quiz-blue">2:00</span>
         </div>
       </div>
       
@@ -71,7 +71,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         <button
           onClick={onNextQuestion}
           disabled={selectedOption === null}
-          className="w-full bg-black text-white py-4 rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-quiz-blue text-white py-4 rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <span className="mr-2">Tiếp theo</span>
           <ArrowRight size={20} />

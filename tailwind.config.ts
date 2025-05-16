@@ -26,9 +26,9 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				quiz: {
-					purple: '#9b87f5',
-					'light-purple': '#E5DEFF',
-					'selected': '#8B5CF6',
+					blue: '#1E88E5',
+					'light-blue': '#E3F2FD',
+					'selected': '#1976D2',
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

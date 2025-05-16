@@ -12,7 +12,7 @@ const Index = () => {
         </p>
         <Link 
           to="/quiz" 
-          className="bg-quiz-purple text-white px-8 py-4 rounded-full inline-block font-medium hover:bg-opacity-90 transition-all"
+          className="bg-quiz-blue text-white px-8 py-4 rounded-full inline-block font-medium hover:bg-opacity-90 transition-all"
         >
           Bắt đầu bài kiểm tra
         </Link>
