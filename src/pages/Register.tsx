@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Eye, EyeOff } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Register = () => {
@@ -12,6 +13,8 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [acceptTerms, setAcceptTerms] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -32,8 +35,15 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-md px-8 py-10 rounded-2xl bg-quiz-blue text-white">
+    <div 
+      className="min-h-screen flex items-center justify-center bg-cover bg-center" 
+      style={{ 
+        backgroundImage: 'url(https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&q=80)',
+        backgroundBlendMode: 'overlay',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)'
+      }}
+    >
+      <div className="w-full max-w-md px-8 py-10 rounded-2xl bg-quiz-blue text-white shadow-xl">
         <h1 className="text-3xl font-bold text-center mb-8">REGISTER</h1>
         
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -52,28 +62,46 @@ const Register = () => {
           
           <div className="space-y-2">
             <label htmlFor="password" className="block">Password</label>
-            <Input
-              id="password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter password"
-              required
-              className="bg-white text-black w-full h-10 px-3 py-2 rounded-md"
-            />
+            <div className="relative">
+              <Input
+                id="password"
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter password"
+                required
+                className="bg-white text-black w-full h-10 px-3 py-2 rounded-md pr-10"
+              />
+              <button 
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500"
+              >
+                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            </div>
           </div>
           
           <div className="space-y-2">
             <label htmlFor="confirmPassword" className="block">Confirm Password</label>
-            <Input
-              id="confirmPassword"
-              type="password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              placeholder="Confirm password"
-              required
-              className="bg-white text-black w-full h-10 px-3 py-2 rounded-md"
-            />
+            <div className="relative">
+              <Input
+                id="confirmPassword"
+                type={showConfirmPassword ? "text" : "password"}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="Confirm password"
+                required
+                className="bg-white text-black w-full h-10 px-3 py-2 rounded-md pr-10"
+              />
+              <button 
+                type="button"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500"
+              >
+                {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            </div>
           </div>
           
           <div className="flex items-center space-x-2 pt-2">
