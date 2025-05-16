@@ -10,12 +10,20 @@ const Index = () => {
           Bài kiểm tra này sẽ giúp bạn đánh giá trạng thái sức khỏe tinh thần hiện tại của mình. 
           Gồm 10 câu hỏi và mất khoảng 2 phút để hoàn thành.
         </p>
-        <Link 
-          to="/quiz" 
-          className="bg-quiz-blue text-white px-8 py-4 rounded-full inline-block font-medium hover:bg-opacity-90 transition-all"
-        >
-          Bắt đầu bài kiểm tra
-        </Link>
+        <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center">
+          <Link 
+            to="/quiz" 
+            className="bg-quiz-blue text-white px-8 py-4 rounded-full inline-block font-medium hover:bg-opacity-90 transition-all"
+          >
+            Bắt đầu bài kiểm tra
+          </Link>
+          <Link 
+            to="/register" 
+            className="bg-white text-quiz-blue border border-quiz-blue px-8 py-4 rounded-full inline-block font-medium hover:bg-quiz-light-blue transition-all"
+          >
+            Đăng ký tài khoản
+          </Link>
+        </div>
       </div>
     </div>
   );
