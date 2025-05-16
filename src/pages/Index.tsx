@@ -1,11 +1,21 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center max-w-lg px-6">
+        <h1 className="text-3xl font-bold mb-6 text-gray-800">Đánh giá sức khỏe tinh thần</h1>
+        <p className="text-gray-600 mb-8">
+          Bài kiểm tra này sẽ giúp bạn đánh giá trạng thái sức khỏe tinh thần hiện tại của mình. 
+          Gồm 10 câu hỏi và mất khoảng 2 phút để hoàn thành.
+        </p>
+        <Link 
+          to="/quiz" 
+          className="bg-quiz-purple text-white px-8 py-4 rounded-full inline-block font-medium hover:bg-opacity-90 transition-all"
+        >
+          Bắt đầu bài kiểm tra
+        </Link>
       </div>
     </div>
   );

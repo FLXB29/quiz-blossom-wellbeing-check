@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,51 @@
 
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #f6f1ff, #eee6ff, #e5deff);
+    min-height: 100vh;
+  }
+}
+
+.quiz-container {
+  max-width: 100%;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .quiz-container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .quiz-container {
+    max-width: 768px;
+  }
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: #E5DEFF;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #9b87f5;
+  transition: width 0.3s ease;
+}
+
+.answer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .answer-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
